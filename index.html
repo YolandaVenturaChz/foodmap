@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my google map</title>
+    <link rel="stylesheet" href="vendors/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="vendors/plugins/css/jquery.gmaps.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>my google map</h1>
+    <div id="mapa"></div>
+    <div data-key="AIzaSyDwNBXmHBDQ29JWsRH8gwNVkf7mM0-flaI" 
+        data-control-zoom="true"
+        data-control-type="true"
+        data-control-scale="true"
+        data-control-streetview="true"
+        data-control-rotate="true"
+        data-event-mousewheel="true" 
+        data-zoom="14" role="map" class="gmaps">
+    
+        <!-- items de ubicaciones -->
+        <div data-id="1" data-lat="-12.153" data-lng="-76.972" class="marker">
+            <div class="map-card">
+                <h1>This is my title 1</h1>
+                <p>Address: Fake street, #445, Stgo.</p>
+                <p>Phone: +56753223344</p>
+                <p>e-Mail: fake1@email.com</p>
+            </div>
+        </div>
+        
+        <div data-id="2" data-lat="-12.123" data-lng="-76.977" class="marker">
+            <div class="map-card">
+                <h1>This is my title 2</h1>
+                <p>Address: Fake street, #445, Stgo.</p>
+                <p>Phone: +56753223344</p>
+                <p>e-Mail: fake2@email.com</p>
+            </div>
+        </div>
+        
+        <div data-id="3" data-lat="-12.085" data-lng=" -77.007" class="marker">
+            <div class="map-card">
+                <h1>This is my title 3</h1>
+                <p>Address: Fake street, #445, Stgo.</p>
+                <p>Phone: +56753223344</p>
+                <p>e-Mail: fake3@email.com</p>
+            </div>
+        </div>
+        <!-- fin datos de ubicación -->
+        
+    
+         
+    </div>
+
+
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="vendors/plugins/js/jquery.gmaps.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
