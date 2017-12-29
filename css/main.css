@@ -9,3 +9,7 @@
     padding: 0;
     margin: 0;
 }
+#mapa {
+   height:500px;
+   width: 100%;
+}

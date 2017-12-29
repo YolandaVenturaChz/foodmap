@@ -1,5 +1,6 @@
 data;
 $(document).ready(function () {
+    $('.gmaps').gmaps();
     var valor;
     var values = "";
     function restaurant() {
