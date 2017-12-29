@@ -1,38 +1,14 @@
-// La funcionalidad de tu proyecto
-function initMap() {
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: {
-            lat: -12.082,
-            lng: -76.9282
-        }
-    });
-    directionsDisplay.setMap(map);
-    var startPoint = document.getElementById('start-point');
-    var finalPoint = document.getElementById('final-point');
-    new google.maps.places.Autocomplete(startPoint);
-    new google.maps.places.Autocomplete(finalPoint);
+// cuando carga el coumento pasa por 3 procesos Loading, interactive-parseo y complete(comunicarte con los recursos externos con los cdn, link del jQuery)
+$(document).ready(function () {
+    // console.log(window.location.href);window.location.href = ''
+    // direccionando a otro ruta
+    setTimeout(function () {
+        window.location.href = 'index.html';
+    }, 3000);
 
-    var getRoute = function () {
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-    };
-    document.getElementById('route').addEventListener('click', getRoute);
-}
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    directionsService.route({
-        origin: document.getElementById('start-point').value,
-        destination: document.getElementById('final-point').value,
-        travelMode: 'DRIVING'
-    }, function (response, status) {
-        if (status === 'OK') {
-            directionsDisplay.setDirections(response);
-        } else {
-            window.alert('Estamos teniendo inconvenientes para encontrar su ubicación');
-        }
-        document.getElementById('start-point').value = '';
-        document.getElementById('final-point').value = '';
-    });
-}
+
+});
+$("div").data("test", { first: 16, last: "pizza!" });
+$("span:first").text($("div").data("test").first);
+$("span:last").text($("div").data("test").last);
